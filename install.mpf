@@ -1,0 +1,6 @@
+cd ruuvitag
+md lib
+cd lib
+md ruuvitag
+cd ruuvitag
+mput .
