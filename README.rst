@@ -33,7 +33,7 @@ Example
         print(ruuvitag)
 
 
-    def run(self):
+    def run(ruuvi):
         try:
             while True:
                 ruuvi.scan()
