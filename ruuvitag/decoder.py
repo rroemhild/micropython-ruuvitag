@@ -4,7 +4,7 @@ import ubinascii
 from .format import RuuviTagRAWv1, RuuviTagRAWv2
 
 
-def decode_data_format_3(mac, rssi, data):
+def decode_raw_1(mac, rssi, data):
     """RuuviTag RAW 1 decoder"""
     humidity = data[3] / 2
 
@@ -35,7 +35,7 @@ def decode_data_format_3(mac, rssi, data):
     )
 
 
-def decode_data_format_5(mac, rssi, data):
+def decode_raw_2(mac, rssi, data):
     """RuuviTag RAW 2 decoder"""
     temperature = ustruct.unpack("!h", data[3:5])[0] * 0.005
 

@@ -4,8 +4,6 @@ MicroPython RuuviTag Scanner
 
 Harvest data from `RuuviTag BLE Sensor Beacon <http://ruuvitag.com/>`_ with MicroPython.
 
-**Work In Progress**
-
 micropython-ruuvitag supports RuuviTag Data Format 3 (RAWv1) and 5 (RAWv2) only. See `RuuviTag Sensor protocols <https://github.com/ruuvi/ruuvi-sensor-protocols>`_ for details.
 
 The ruuvitag scanner for **Pycom devices** was transfered to a new repo `pycom-ruuvitag <https://github.com/rroemhild/pycom-ruuvitag>`_.
@@ -19,23 +17,6 @@ Copy all files from the ``ruuvitag`` direcotory to the ``lib/ruuvitag`` director
 .. code-block:: shell
 
     mpfshell ttyUSB0 -s install.mpf
-
-
-Scanner
--------
-
-``RuuviTagScanner`` scans for RuuviTags and decode the data format. The result is a list with named tuples.
-
-Scan 10 seconds for RuuviTag sensors and print the result:
-
-.. code-block:: python
-
-    from ruuvitag.scanner import RuuviTagScanner
-
-    rts = RuuviTagScanner()
-
-    for ruuvitag in rts.find_ruuvitags(timeout=10):
-        print(ruuvitag)
 
 
 Example
@@ -70,12 +51,12 @@ Example
 Whitelist devices
 -----------------
 
-You can collect data from only the devices you want by define a whitelist with mac addresses. Other Devices then will be ignored. Whitelists can be used with RuuviTagScanner and RuuviTagTracker.
+You can collect data from only the devices you want by define a whitelist with mac the devices addresses. Do not include ``:`` in the mac address. For example
 
 .. code-block:: python
 
-    whitelist = (b'aa:bb:cc:dd:ee:21', b'aa:bb:cc:dd:ee:42',)
-    rts = RuuviTagScanner(whitelist)
+    whitelist = (b'aabbccddee21', b'aabbccddee42',)
+    ruuvi = RuuviTag(whitelist=whitelist)
 
 
 Blacklist persistence

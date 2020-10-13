@@ -1,4 +1,4 @@
-cd ruuvitag
+lcd ruuvitag
 md lib
 cd lib
 md ruuvitag
