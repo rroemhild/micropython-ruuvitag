@@ -6,9 +6,9 @@ Harvest data from `RuuviTag BLE Sensor Beacon <http://ruuvitag.com/>`_ with Micr
 
 **Work In Progress**
 
-micropython-ruuvitag supports RuuviTag Data Format 3 (RAWv1) and 5 (RAWv2) only. See `Sensor protocols <https://github.com/ruuvi/ruuvi-sensor-protocols>`_ for details.
+micropython-ruuvitag supports RuuviTag Data Format 3 (RAWv1) and 5 (RAWv2) only. See `RuuviTag Sensor protocols <https://github.com/ruuvi/ruuvi-sensor-protocols>`_ for details.
 
-*The ruuvitag scanner for Pycom was transfered to a new repo `pycom-ruuvitag <https://github.com/rroemhild/pycom-ruuvitag>`_*
+The ruuvitag scanner for **Pycom devices** was transfered to a new repo `pycom-ruuvitag <https://github.com/rroemhild/pycom-ruuvitag>`_.
 
 
 Installation
